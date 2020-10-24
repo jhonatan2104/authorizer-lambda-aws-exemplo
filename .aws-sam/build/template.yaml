@@ -1,0 +1,28 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: 'authorizer-lambda
+
+  Sample SAM Template for authorizer-lambda
+
+  '
+Globals:
+  Function:
+    Timeout: 3
+Resources:
+  AuthLambdaFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Description: "Lambda para autentica\xE7\xE3o de Users na API"
+      CodeUri: AuthLambdaFunction
+      Handler: app.lambdaHandler
+      Runtime: nodejs12.x
+      Environment:
+        Variables:
+          SECRET: xsxsxsxsxsxxsxsxsdasdasdasdasdsadasdddddddddd
+Outputs:
+  AuthLambdaFunction:
+    Description: Auth Lambda Function ARN
+    Value:
+      Fn::GetAtt:
+      - AuthLambdaFunction
+      - Arn

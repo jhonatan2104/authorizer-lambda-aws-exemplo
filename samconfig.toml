@@ -1,0 +1,11 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "authorizer-lambda-api-polartis"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-cqjaa6x8sjkr"
+s3_prefix = "authorizer-lambda-api-polartis"
+region = "us-east-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+
